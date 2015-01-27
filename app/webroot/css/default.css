@@ -2,11 +2,12 @@ body {
   background-image: url("../img/background.png");
 }
 #container {
-  padding: 20px 50px 25px 75px;
+  padding: 10px 50px 25px 75px;
 }
 #header {
   padding-bottom: 25px;
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 #header .logo {
@@ -22,7 +23,7 @@ body {
 }
 
 #footer {
-  padding: 25px;
+  padding-top: 50px;
   text-align: center;
   font-style: italic;
 }
@@ -67,4 +68,9 @@ body {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 25px solid black;
+}
+
+#map-canvas {
+  height: 300px;
+  width: 350px;
 }

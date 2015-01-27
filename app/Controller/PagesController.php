@@ -20,6 +20,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * Static content controller
@@ -58,5 +59,30 @@ class PagesController extends AppController {
 
 	public function event() {
 		$this->set("title_for_layout","Eventos");
+	}
+
+	public function contact() {
+		$this->set("title_for_layout","Contato");
+
+		if ($this->request->data) {
+			$email = '<span style="border: 1px solid #CCC;width: 400px; padding: 10px; display: inline-block"><h3>Mensagem enviada pelo site</h3><hr>
+<b>Nome: </b>'.$this->request->data['Email']['nome'].'<br />
+<b>Telefone: </b>'.$this->request->data['Email']['telefone'].'<br />
+<b>E-mail: </b>'.$this->request->data['Email']['email'].'<br />
+<b>Endereço: </b>'.$this->request->data['Email']['endereco'].'<br />
+<b>Assunto: </b>'.$this->request->data['Email']['evento'].'<br />
+<b>Mensagem: </b><p>'.nl2br($this->request->data['Email']['Mensagem']).'</p><br />
+			';
+			$Email = new CakeEmail();
+			$Email->config('default');
+			$Email->from(array('me@example.com' => 'My Site'))
+				->emailFormat('html')
+				->to('mothsin@hotmail.com')
+				->subject('About')
+				->send($email);
+			$this->Session->setFlash(__('E-mail enviado com sucesso'));
+			$this->redirect(array('action' => 'contato'));
+		}
+
 	}
 }
