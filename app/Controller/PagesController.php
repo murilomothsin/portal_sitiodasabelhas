@@ -45,7 +45,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Capa', 'Hotel');
+	public $uses = array('Capa', 'Hotel', 'Event');
 
 	public function home() {
 		$this->set("title_for_layout","Home");
@@ -59,6 +59,7 @@ class PagesController extends AppController {
 
 	public function event() {
 		$this->set("title_for_layout","Eventos");
+		$this->set( "eventos", $this->Event->find('all') );
 	}
 
 	public function contact() {
