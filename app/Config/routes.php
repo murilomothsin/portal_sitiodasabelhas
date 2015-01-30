@@ -31,7 +31,8 @@
 	Router::connect('/pousada', array('controller' => 'pages', 'action' => 'hotel'));
 	Router::connect('/eventos', array('controller' => 'pages', 'action' => 'event'));
   Router::connect('/contato', array('controller' => 'pages', 'action' => 'contact'));
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+  Router::connect('/ajax', array('controller' => 'pages', 'action' => 'ajax'));
+	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

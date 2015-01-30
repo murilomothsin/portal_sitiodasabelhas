@@ -1,34 +1,15 @@
-!function ($) {
-	$(function(){
-		$('#myCarousel').carousel()
-
-		$('#lojaCarousel').carousel({
-			interval: 10000
-		})
-	})
-}(window.jQuery)
 
 $( "#CloseModal" ).click(function() {
 	$( '#contentView' ).empty();
 });
 
-$( "#ver_mais" ).click(function() {
-		var dir = this.getAttribute("data-id");
-		alert(dir);
-		$.get("/fotoboth/welcomes/ajax/"+dir,
+$( ".ver_mais" ).click(function() {
+		var id = this.getAttribute("data-id");
+		$.get("/cakephp/pages/ajax/"+id,
 			null,
 			function(data) {
+				$('#myModal').modal('show');
 				$("#contentView").html(data);
 			}
 		);
 });
-
-
-function getAjax(id){
-	$.get("/fotoboth/welcomes/ajax/"+id,
-			null,
-			function(data) {
-				$("#contentView").html(data);
-			}
-		);
-}

@@ -65,7 +65,9 @@ $cakeVersion = __d('cake_dev', 'Sítio das abelhas - 2014')
 	<?php
 		echo $this->Html->script('vendor/jquery');
 		echo $this->Html->script('bootstrap/bootstrap-dropdown');
+		echo $this->Html->script('bootstrap/bootstrap-modal');
 		echo $this->Html->script('fotorama');
+		echo $this->Html->script('geral');
 	?>
 </body>
 </html>
