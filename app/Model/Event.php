@@ -18,7 +18,7 @@
       'images' => array(
         'main' => array(
           'name_category' => 'Main image',
-          'sizes' => array('150x100', '1050_500'),
+          'sizes' => array('150x100', '1024_1024'),
           'index' => true,
           'description' => false,
         ),
