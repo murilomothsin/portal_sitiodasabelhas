@@ -34,11 +34,11 @@ $cakeVersion = __d('cake_dev', 'Sítio das abelhas - 2014')
 			</div>
 			<div class="col-md-6 menu-superior">
 				<ul class="nav nav-pills nav-justified" role="tablist">
-				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'home') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Home', '/'); ?></li>
+				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'home') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('O Sitio', '/'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'hotel') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Pousada', '/pousada'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'event') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Eventos', '/eventos'); ?></li>
-				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'reservas') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Reservas', '/reservas'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'lazer') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Lazer', '/lazer'); ?></li>
+				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'galeria') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Galeria', '/galeria'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'contact') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Contato', '/contato'); ?></li>
 				</ul>
 			</div>

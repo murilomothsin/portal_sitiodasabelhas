@@ -2,38 +2,62 @@
 .caption-img {
   position: absolute;
   bottom: 5px;
-  background-color: #fff;
-  display: block;
-  min-width: 350px;
-  max-width: 400px;
-  margin: 10px auto;
-  margin-left: 400px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 </style>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-md-4">
       <div class="fotorama" 
             data-nav="thumbs" 
             data-loop="true" 
-            data-autoplay="true" 
+            data-autoplay="false" 
             data-ratio="16/9" 
             data-width="100%" 
-            data-minwidth="600"
-            data-maxwidth="1200%"
-            data-minheight="300"
-            data-maxheight="100%">
+            data-minheight="350">
       <?php
       foreach ($capas as $key => $value) {
         //pr($value);
-        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><span class="text-center caption-img"><h3>'.$value['Capa']['description'].'</h3></span></center></div>';
+        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
       } 
       ?>
       </div>
     </div>
+
+    <div class="col-md-4">
+      <div class="fotorama" 
+            data-nav="thumbs" 
+            data-loop="true" 
+            data-autoplay="false" 
+            data-ratio="16/9" 
+            data-width="100%"
+            data-minheight="350" >
+      <?php
+      foreach ($capas as $key => $value) {
+        //pr($value);
+        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
+      } 
+      ?>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="fotorama" 
+            data-nav="thumbs" 
+            data-loop="true" 
+            data-autoplay="false" 
+            data-ratio="16/9" 
+            data-width="100%" 
+            data-minheight="350">
+      <?php
+      foreach ($capas as $key => $value) {
+        //pr($value);
+        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
+      } 
+      ?>
+      </div>
+    </div>
+
   </div>
 </div>
 <br />

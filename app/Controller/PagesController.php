@@ -62,18 +62,15 @@ class PagesController extends AppController {
 		$this->set( "eventos", $this->Event->find('all') );
 	}
 
-	public function ajax($id = null){
-		//if(strlen($id) == 13)
-		//	$id = '0'.$id;
-		//$targetPath =  'img/pictures/'.$id;
-		//$targetView = 'pictures/'.$id.'/';
-		//$files1 = scandir($targetPath);
-		//$targetPath .= '/';
-		//unset($files1[0]);
-		//unset($files1[1]);
-		//sort($files1);
+	public function ajax($id = null, $type = ''){
 		$this->layout = "ajax";
-		$this->set("evento", $this->Event->findById($id));
+		if($type == 'event'){
+			$this->set("evento", $this->Event->findById($id));
+		}
+		if($type == 'hotel'){
+			$this->set("evento", $this->Hotel->findById($id));
+		}
+		
 		//$this->set("imageList",$files1);
 	}
 
