@@ -1,18 +1,16 @@
 <?php
 
-  class Event extends AppModel {
+  class Galery extends AppModel {
 
-    public $useTable = 'event';
+    public $useTable = 'galery';
 
-    public $name = 'Event';
-
-    var $belongsTo = array('EventStatus');
+    public $name = 'Galery';
 
     public $validate = array(
       'title' => array(
         'required' => array(
            'rule' => array('notEmpty'),
-           'message' => 'Digite um titulo para o evento!'
+           'message' => 'Digite um titulo para a galeria!'
         )
       )
     );

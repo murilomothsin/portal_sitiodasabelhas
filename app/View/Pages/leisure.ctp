@@ -1,30 +1,25 @@
-<div class="row">
-  <?php 
-    foreach ($eventos as $key => $value) {
-      if($value['Event']['event_status_id'] == 1)
-        $text = 'Salao com Refeitorio';
-      else
-        $text = 'Salao para Palestras';
-      echo '
+
+
+<?php
+foreach ($lazer as $key => $value) {
+  echo '
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['sizes']['1024_1024'].'" alt="'.$value['BrwImage']['main']['model'].'">
           <div class="caption" style="position: relative;">
-            <center><h3>'.$value['Event']['title'].'</h3></center>
-            <p>'.$value['Event']['description'].'</p>
-            <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="event" data-id="'.$value['Event']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
-              Ver mais!
-            </button>
-            <span style="position: absolute; bottom: 20px; right: 5px; color: #1FA440;">
-            <b>'.$text.'</b>
-            </span>
+            <center><h3>'.$value['Leisure']['title'].'</h3></center>
+            <p>'.$value['Leisure']['description'].'</p>
+            <div align="center">
+              <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="leisure" data-id="'.$value['Leisure']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
+                Ver mais!
+              </button>
+            </div>
           </div>
         </div>
       </div>
       ';
-    }
-  ?>
-</div>
+}
+?>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

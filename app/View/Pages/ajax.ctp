@@ -12,7 +12,8 @@ echo $this->Html->script('fotorama');
     data-ratio="600/360" 
     data-max-width="100%"
     data-autoplay="true"
-    data-stopautoplayontouch="false"
+    data-allowfullscreen="true"
+    data-stopautoplayontouch="true"
     data-allowfullscreen="true">
     <?php 
       echo '<a href="'.$evento['BrwImage']['main']['sizes']['1024_1024'].'"></a>';

@@ -28,8 +28,11 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/pousada', array('controller' => 'pages', 'action' => 'hotel'));
+  Router::connect('/pousada', array('controller' => 'pages', 'action' => 'hotel'));
+	Router::connect('/pousada/:id', array('controller' => 'pages', 'action' => 'hotel'));
 	Router::connect('/eventos', array('controller' => 'pages', 'action' => 'event'));
+  Router::connect('/galeria', array('controller' => 'pages', 'action' => 'galery'));
+  Router::connect('/lazer', array('controller' => 'pages', 'action' => 'leisure'));
   Router::connect('/contato', array('controller' => 'pages', 'action' => 'contact'));
   Router::connect('/ajax', array('controller' => 'pages', 'action' => 'ajax'));
 	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));

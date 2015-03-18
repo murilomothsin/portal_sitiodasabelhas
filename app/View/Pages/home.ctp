@@ -6,56 +6,64 @@
 </style>
 <div class="container-fluid">
   <div class="row">
-
     <div class="col-md-4">
       <div class="fotorama" 
-            data-nav="thumbs" 
+            data-nav="false" 
             data-loop="true" 
-            data-autoplay="false" 
+            data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%" 
             data-minheight="350">
       <?php
-      foreach ($capas as $key => $value) {
+      foreach ($capasPousada as $key => $value) {
         //pr($value);
-        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
+        echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
       } 
       ?>
       </div>
+      <center>
+        <?php echo $this->Html->link('Pousada', '/pousada', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
+      </center>
     </div>
 
     <div class="col-md-4">
       <div class="fotorama" 
-            data-nav="thumbs" 
+            data-nav="false" 
             data-loop="true" 
-            data-autoplay="false" 
+            data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%"
             data-minheight="350" >
       <?php
-      foreach ($capas as $key => $value) {
+      foreach ($capasLazer as $key => $value) {
         //pr($value);
-        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
+        echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
       } 
       ?>
       </div>
+      <center>
+        <?php echo $this->Html->link('Lazer', '/lazer', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
+      </center>
     </div>
 
     <div class="col-md-4">
       <div class="fotorama" 
-            data-nav="thumbs" 
+            data-nav="false" 
             data-loop="true" 
-            data-autoplay="false" 
+            data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%" 
             data-minheight="350">
       <?php
-      foreach ($capas as $key => $value) {
+      foreach ($capasEventos as $key => $value) {
         //pr($value);
-        echo '<div data-img="'.$value['BrwImage']['main']['url'].'" data-thumb="'.$value['BrwImage']['main']['url'].'"><center><div class="well col-md-6 col-md-offset-2 caption-img">'.$value['Capa']['description'].'</div></center></div>';
+        echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
       } 
       ?>
       </div>
+      <center>
+        <?php echo $this->Html->link('Eventos', '/eventos', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
+      </center>
     </div>
 
   </div>

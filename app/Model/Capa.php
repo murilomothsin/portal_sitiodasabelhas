@@ -6,6 +6,8 @@
 
     public $name = 'Capa';
 
+    var $belongsTo = array('CapaStatus');
+
     public $validate = array(
       'title' => array(
         'required' => array(

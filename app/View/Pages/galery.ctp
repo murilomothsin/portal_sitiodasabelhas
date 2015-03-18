@@ -1,22 +1,18 @@
 <div class="row">
   <?php 
-    foreach ($eventos as $key => $value) {
-      if($value['Event']['event_status_id'] == 1)
-        $text = 'Salao com Refeitorio';
-      else
-        $text = 'Salao para Palestras';
+    foreach ($galerias as $key => $value) {
       echo '
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['sizes']['1024_1024'].'" alt="'.$value['BrwImage']['main']['model'].'">
-          <div class="caption" style="position: relative;">
-            <center><h3>'.$value['Event']['title'].'</h3></center>
-            <p>'.$value['Event']['description'].'</p>
-            <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="event" data-id="'.$value['Event']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
+          <div class="caption" style="position: relative; ">
+            <center><h3>'.$value['Galery']['title'].'</h3></center>
+            <p>'.$value['Galery']['description'].'</p>
+            <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="galery" data-id="'.$value['Galery']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
               Ver mais!
             </button>
-            <span style="position: absolute; bottom: 20px; right: 5px; color: #1FA440;">
-            <b>'.$text.'</b>
+            <span style="position: absolute; bottom: 10px; right: 5px; color: #1FA440;">
+             <i>'.$this->Time->format($value['Galery']['when'], '%d/%m/%Y').'</i>
             </span>
           </div>
         </div>

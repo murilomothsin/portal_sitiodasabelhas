@@ -45,16 +45,26 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Capa', 'Hotel', 'Event');
+	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure');
 
 	public function home() {
 		$this->set("title_for_layout","Home");
-		$this->set( "capas", $this->Capa->find('all') );
+		$this->set( "capasPousada", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 1) ) ) );
+		$this->set( "capasLazer", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 2) ) ) );
+		$this->set( "capasEventos", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 3) ) ) );
 	}
 
 	public function hotel() {
+		$this->set("cat", 1);
 		$this->set("title_for_layout","Pousada");
-		$this->set( "cabanas", $this->Hotel->find('all') );
+		if(isset($this->request->params['id'])){
+			$this->set("cat", 0);
+			$this->set( "cabanas", $this->Hotel->find('all', array(
+        'conditions' => array('Hotel.hotel_status_id' => $this->request->params['id']) ) ));
+		}else{
+			$this->set("cat", 1);
+			$this->set( "cabanas", $this->Hotel->find('all') );
+		}
 	}
 
 	public function event() {
@@ -62,10 +72,27 @@ class PagesController extends AppController {
 		$this->set( "eventos", $this->Event->find('all') );
 	}
 
+	public function leisure() {
+		$this->set("title_for_layout","Lazer");
+		$this->set( "lazer", $this->Leisure->find('all') );
+	}
+
+	public function galery() {
+		$this->set("title_for_layout","Galeria de fotos");
+		$this->set( "galerias", $this->Galery->find('all', array(
+        'order' => array('Galery.when' => 'desc')) ));
+	}
+
 	public function ajax($id = null, $type = ''){
 		$this->layout = "ajax";
 		if($type == 'event'){
 			$this->set("evento", $this->Event->findById($id));
+		}
+		if($type == 'leisure'){
+			$this->set("evento", $this->Leisure->findById($id));
+		}
+		if($type == 'galery'){
+			$this->set("evento", $this->Galery->findById($id));
 		}
 		if($type == 'hotel'){
 			$this->set("evento", $this->Hotel->findById($id));

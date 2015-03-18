@@ -1,23 +1,21 @@
 <?php
 
-	class Hotel extends AppModel {
+  class Leisure extends AppModel {
 
-		public $useTable = 'hotel';
+    public $useTable = 'leisure';
 
-		public $name = 'Hotel';
+    public $name = 'Leisure';
 
-    var $belongsTo = array('HotelStatus');
+    public $validate = array(
+      'title' => array(
+        'required' => array(
+           'rule' => array('notEmpty'),
+           'message' => 'Digite um titulo para o item!'
+        )
+      )
+    );
 
-		public $validate = array(
-		  'title' => array(
-				'required' => array(
-					 'rule' => array('notEmpty'),
-					 'message' => 'Digite um titulo para a cabana!'
-				)
-		  )
-		);
-
-	var $brwConfig = array(
+  var $brwConfig = array(
     'images' => array(
       'main' => array(
         'name_category' => 'Main image',
@@ -29,11 +27,11 @@
         'name_category' => 'Images for gallery',
         'sizes' => array('150x100', '1024_1024'),
         'index' => false,
-        'description' => true,
+        'description' => false,
       ),
     ),
   );
 
-	}
+  }
 
 ?>

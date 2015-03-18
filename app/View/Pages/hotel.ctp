@@ -1,3 +1,4 @@
+<?php if($cat == 0){ ?>
 <table>
 <?php
   $flag = true;
@@ -5,7 +6,29 @@
     echo print_img_pousada($value, $key);
     echo '<tr style="height: 30px;"><td colspan="2"></td></tr>';
   }
+}else{
+  ?>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1">
+    <div class="thumbnail">
+      <?php echo $this->Html->link($this->Html->image('familias.jpg', array('alt' => 'Familias')), '/pousada/1', array('escape' => false)); ?>
+      <div class="caption" align="center">
+        <?php echo $this->Html->link('Cabanas', '/pousada/1', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-md-offset-1">
+    <div class="thumbnail">
+      <?php echo $this->Html->link($this->Html->image('grupos.jpg', array('alt' => 'Familias')), '/pousada/2', array('escape' => false)); ?>
+      <div class="caption" align="center">
+        <?php echo $this->Html->link('Alojamentos', '/pousada/2', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
+  <?php
+}
   function print_img_pousada($cabana, $index) {
     if($index % 2 == 0){
       return '<tr style="height: 275px; margin: 20px;">
