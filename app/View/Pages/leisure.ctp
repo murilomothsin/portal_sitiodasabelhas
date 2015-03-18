@@ -1,11 +1,16 @@
-
+<div class="row">
 
 <?php
+$i = 1;
 foreach ($lazer as $key => $value) {
+  if($i == 3){
+    echo '<div class="row">';
+  }
+
   echo '
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="'.$value['BrwImage']['main']['sizes']['1024_1024'].'" alt="'.$value['BrwImage']['main']['model'].'">
+          <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
           <div class="caption" style="position: relative;">
             <center><h3>'.$value['Leisure']['title'].'</h3></center>
             <p>'.$value['Leisure']['description'].'</p>
@@ -18,9 +23,14 @@ foreach ($lazer as $key => $value) {
         </div>
       </div>
       ';
+  if($i == 3){
+    echo '</div>';
+    $i = 1;
+  }
+  $i++;
 }
 ?>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" style="width: 850px; height: 500px;">
