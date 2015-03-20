@@ -16,10 +16,10 @@ echo $this->Html->script('fotorama');
     data-stopautoplayontouch="true"
     data-allowfullscreen="true">
     <?php 
-      echo '<a href="'.$evento['BrwImage']['main']['sizes']['1024_1024'].'"></a>';
+      echo '<a href="'.$evento['BrwImage']['main']['url'].'"></a>';
       foreach ($evento['BrwImage']['gallery'] as $key => $value) {
         //echo $this->Html->image($targetPath.$value);
-        echo '<a href="'.$value['sizes']['1024_1024'].'"></a>';
+        echo '<a href="'.$value['url'].'"></a>';
         //echo $this->Html->link('', $targetPath.$value);
       }
     ?>

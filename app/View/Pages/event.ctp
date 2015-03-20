@@ -8,7 +8,7 @@
       echo '
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="'.$value['BrwImage']['main']['sizes']['1024_1024'].'" alt="'.$value['BrwImage']['main']['model'].'">
+          <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'">
           <div class="caption" style="position: relative;">
             <center><h3>'.$value['Event']['title'].'</h3></center>
             <p>'.$value['Event']['description'].'</p>
