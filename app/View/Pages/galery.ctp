@@ -1,10 +1,14 @@
 <div class="row">
-  <?php 
+  <?php
+    $i = 1;
     foreach ($galerias as $key => $value) {
+      if($i == 3){
+        echo '<div class="row">';
+      }
       echo '
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="'.$value['BrwImage']['main']['sizes']['1024_1024'].'" alt="'.$value['BrwImage']['main']['model'].'">
+          <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
           <div class="caption" style="position: relative; ">
             <center><h3>'.$value['Galery']['title'].'</h3></center>
             <p>'.$value['Galery']['description'].'</p>
@@ -18,6 +22,11 @@
         </div>
       </div>
       ';
+      if($i == 3){
+        echo '</div>';
+        $i = 1;
+      }
+      $i++;
     }
   ?>
 </div>
