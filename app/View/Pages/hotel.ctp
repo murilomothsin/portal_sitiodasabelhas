@@ -1,13 +1,40 @@
 <?php if($cat == 0){ ?>
-<table>
-<?php
-  $flag = true;
-  foreach ($cabanas as $key => $value) {
-    echo print_img_pousada($value, $key);
-    echo '<tr style="height: 30px;"><td colspan="2"></td></tr>';
-  }
-}else{
+<div class="row">
+  <?php
+    $i = 1;
+    foreach ($cabanas as $key => $value) {
+      //pr($value);
+      if($i == 3){
+        echo '<div class="row">';
+      }
+      echo '
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
+          <div class="caption" style="position: relative; ">
+            <center><h3>'.$value['Hotel']['title'].'</h3></center>
+            <p style="min-height: 200px;"" >'.nl2br($value['Hotel']['description']).'</p>
+            <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="hotel" data-id="'.$value['Hotel']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
+              Ver mais!
+            </button>
+            <span style="font-size: 14px; position: absolute; bottom: 20px; right: 15px; color: #1FA440;">
+             <b>'.$value['Hotel']['type'].'</b>
+            </span>
+          </div>
+        </div>
+      </div>
+      ';
+      if($i == 3){
+        echo '</div>';
+        $i = 1;
+      }
+      $i++;
+    }
   ?>
+</div>
+
+<?php }else{ ?>
+
 <div class="row">
   <div class="col-md-4 col-md-offset-1">
     <div class="thumbnail">
@@ -27,43 +54,7 @@
   </div>
 </div>
 
-  <?php
-}
-  function print_img_pousada($cabana, $index) {
-    if($index % 2 == 0){
-      return '<tr style="height: 275px; margin: 20px;">
-          <td style="width: 50%;"><img src="'.$cabana['BrwImage']['main']['url'].'" class="img-responsive" alt="Responsive image"></td>
-          <td style="width: 50%; padding: 20px;">
-            <blockquote>
-              <h3>'.$cabana['Hotel']['title'].'</h3>
-              <p>
-                '.$cabana['Hotel']['description'].'
-              </p>
-              <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="hotel" data-id="'.$cabana['Hotel']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
-                Ver mais!
-              </button>
-            </blockquote>
-          </td>
-        </tr>';
-    }else{
-      return '<tr style="height: 275px; margin: 20px;">
-    <td style="width: 50%; padding: 20px;">
-      <blockquote class="blockquote-reverse">
-        <h3>'.$cabana['Hotel']['title'].'</h3>
-        <p>
-          '.$cabana['Hotel']['description'].'
-        </p>
-        <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="hotel" data-id="'.$cabana['Hotel']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
-              Ver mais!
-        </button>
-      </blockquote>
-    </td>
-    <td style="width: 50%;"><img src="'.$cabana['BrwImage']['main']['url'].'" class="img-responsive" alt="Responsive image"></td>
-  </tr>';
-    }
-  }
-?>
-</table>
+<?php } ?>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
