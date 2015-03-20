@@ -53,10 +53,62 @@ $cakeVersion = __d('cake_dev', 'Sítio das abelhas - 2014')
 
 		<div id="footer" class="row"  style="background-color: #FFF;">
 			<hr>
-			<div class="col-md-offset-4 col-md-4">
-				<p>
-					Sítio das abelhas - 2014
-				</p>
+			<div class="row">
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('O Sitio', '/'); ?></h4>
+				</div>
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('Pousada', '/pousada'); ?></h4>
+				</div>
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('Eventos', '/eventos'); ?></h4>
+				</div>
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('Lazer', '/lazer'); ?></h4>
+				</div>
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('Galeria', '/galeria'); ?></h4>
+				</div>
+				<div class="col-md-2">
+					<h4 class="link-footer"><?php echo $this->Html->link('Contato', '/contato'); ?></h4>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-4">
+					<div align="center">
+						<?php echo $this->Html->link($this->Html->image('logo.jpg', array('alt' => 'Sitio das abelhas', 'height' => '100')), '/', array('escape' => false)); ?>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div align="center">
+						<h4>Telefone:</h4>
+	          <p>
+	            Fixo Vivo (51)3179-4100<br />
+	            Geraldo (51)9981-7601 <br />
+	            Leonardo (51)9777-9658<br />
+	          </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<address align="center">
+						<h4>Endereço</h4>
+		        <p>
+		          Rua Pedro Alfredo Breyer <br />
+		          Bairro Padre Tome <br />
+		          Taquara - RS <br />
+		          95600-00
+		        </p>
+		      </address>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4">
+					<div align="center">
+						Sítio das abelhas - <?php echo date('Y'); ?> <br />
+						contato@sitiodasabelhas.com.br
+					</div>
+				</div>
 			</div>
 		</div>
 

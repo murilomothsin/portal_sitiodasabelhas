@@ -29,48 +29,48 @@
 
   <div class="col-md-6 form-contact" style="padding-right: 20px;">
     <?php echo $this->Form->create('Email', array('class' => 'form-horizontal')); ?>
-    
+
     <h3>Contato</h3>
     <hr>
     <p><small>Para entrar em contato conosco por email, preencha os dados abaixo e clique em enviar. O preenchimento dos campos marcados com asterisco (*) e obrigatorio para envio da mensagem. Em breve retornamos o cantato. <strong>Obrigado</strong></small></p>
 
     <div class="col-md-6" style="padding-right: 20px;">
       <?php
-        echo $this->Form->input('nome', 
-                            array('div' => 'form-group', 
-                                  'class' => 'form-control', 
+        echo $this->Form->input('nome',
+                            array('div' => 'form-group',
+                                  'class' => 'form-control',
                                   'placeholder' => 'Nome',
                                   'label' => array('text' => 'Nome: ')
                                   )
                               );
-        echo $this->Form->input('telefone', 
+        echo $this->Form->input('telefone',
                             array('div' => 'form-group',
-                                  'class' => 'form-control', 
+                                  'class' => 'form-control',
                                   'placeholder' => 'Telefone',
                                   'label' => array('text' => 'Telefone: ')
                                   )
                               );
-        
+
       ?>
     </div>
     <div class="col-md-6">
       <?php
-      echo $this->Form->input('email', 
+      echo $this->Form->input('email',
                           array('div' => 'form-group',
-                                'class' => 'form-control', 
+                                'class' => 'form-control',
                                 'type' => 'email',
                                 'placeholder' => 'E-mail',
                                 'label' => array('text' => 'E-mail: ')
                                 )
                             );
-      echo $this->Form->input('endereco', 
+      echo $this->Form->input('endereco',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
                                 'placeholder' => 'Cidade',
                                 'label' => array('text' => 'Cidade: ')
                                 )
                             );
-      
+
     ?>
     </div>
 
@@ -94,7 +94,7 @@
 
     <div class="col-md-4">
       <?php
-        echo $this->Form->input('pessoas', 
+        echo $this->Form->input('pessoas',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
                                 'placeholder' => 'Numero de pessoas',
@@ -104,17 +104,13 @@
       ?>
     </div>
     <div class="col-md-4 col-md-offset-4">
-      <div class="form-group">
-        <label class="label-control">Alimentaçao:</label> <br>
-        <label><input name="data[Email][alimentacao]" type="radio" id="EmailAlimentacao" name="EmailAlimentacao" value="Sim">Sim</label>
-        <label><input name="data[Email][remetente]" type="radio" id="EmailAlimentacao" name="EmailAlimentacao" value="Nao">Nao</label>
-      </div>
+
     </div>
 
     <div class="col-md-12">
       <?php
-      
-      echo $this->Form->input('Mensagem', 
+
+      echo $this->Form->input('Mensagem',
                               array('div' => 'form-group',
                                     'type' => 'textarea',
                                     'rows' => '5',
@@ -159,7 +155,7 @@
             Rua Pedro Alfredo Breyer <br />
             Bairro Padre Tome <br />
             Taquara - RS <br />
-            95600-00 
+            95600-00
           </p>
         </center>
       </div>
