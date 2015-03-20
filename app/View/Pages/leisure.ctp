@@ -26,7 +26,7 @@ foreach ($lazer as $key => $value) {
 
   if($i == 3){
     echo '</div>';
-    $i = 1;
+    $i = 0;
   }
   $i++;
 
