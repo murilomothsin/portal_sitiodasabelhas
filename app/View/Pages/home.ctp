@@ -7,17 +7,20 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-      <div class="fotorama" 
-            data-loop="true" 
-            data-autoplay="true" 
-            data-ratio="16/9" 
-            data-width="100%" 
-            data-minheight="300">
+      <div class="fotorama"
+            data-loop="true"
+            data-autoplay="true"
+            data-arrows="true"
+            data-click="true"
+            data-swipe="true"
+            data-ratio="16/9"
+            data-width="100%"
+            data-minheight="350">
       <?php
       foreach ($capasPousada as $key => $value) {
         //pr($value);
         echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
-      } 
+      }
       ?>
       </div>
       <center>
@@ -26,17 +29,20 @@
     </div>
 
     <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-      <div class="fotorama" 
-            data-loop="true" 
-            data-autoplay="true" 
-            data-ratio="16/9" 
+      <div class="fotorama"
+            data-loop="true"
+            data-autoplay="true"
+            data-arrows="true"
+            data-click="true"
+            data-swipe="true"
+            data-ratio="16/9"
             data-width="100%"
             data-minheight="300" >
       <?php
       foreach ($capasLazer as $key => $value) {
         //pr($value);
         echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
-      } 
+      }
       ?>
       </div>
       <center>
@@ -45,17 +51,20 @@
     </div>
 
     <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
-      <div class="fotorama" 
-            data-loop="true" 
-            data-autoplay="true" 
-            data-ratio="16/9" 
-            data-width="100%" 
-            data-minheight="300">
+      <div class="fotorama"
+            data-loop="true"
+            data-autoplay="true"
+            data-arrows="true"
+            data-click="true"
+            data-swipe="true"
+            data-ratio="16/9"
+            data-width="100%"
+            data-minheight="350">
       <?php
       foreach ($capasEventos as $key => $value) {
         //pr($value);
         echo '<a href="'.$value['BrwImage']['main']['url'].'"></a>';
-      } 
+      }
       ?>
       </div>
       <center>

@@ -26,6 +26,16 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 	?>
 </head>
 <body>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<div id="container" class="container-fluid">
 
 		<div id="header" class="row" style="background-color: #FFF;">
@@ -78,6 +88,8 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 				<div class="col-md-3">
 					<div align="center">
 						<?php echo $this->Html->link($this->Html->image('logo.jpg', array('alt' => 'Sitio das abelhas', 'height' => '100')), '/', array('escape' => false)); ?>
+						<br /> <br />
+						<div class="fb-like" data-href="https://www.facebook.com/sitiodasabelhas" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 					</div>
 				</div>
 				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee" align="center">

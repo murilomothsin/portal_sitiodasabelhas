@@ -6,13 +6,13 @@
   function initialize() {
     var mapOptions = {
       zoom: 14,
-      center: new google.maps.LatLng(-29.673000, -50.739972),
+      center: new google.maps.LatLng(-29.6734521, -50.7398933),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
     var endereco = 'Rua Pedro Alfredo Breyer, Taquara - RS';
-    var latlng = new google.maps.LatLng(-29.673000, -50.739972);
+    var latlng = new google.maps.LatLng(-29.6734521, -50.7398933);
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({'latLng':latlng}, function(results, status){
       if( status = google.maps.GeocoderStatus.OK){
@@ -32,7 +32,7 @@
 
     <h3>Contato</h3>
     <hr>
-    <p><small>Para entrar em contato conosco por email, preencha os dados abaixo e clique em enviar. O preenchimento dos campos marcados com asterisco (*) e obrigatorio para envio da mensagem. Em breve retornamos o cantato. <strong>Obrigado</strong></small></p>
+    <p><small>Para entrar em contato conosco por email, preencha os dados abaixo e clique em enviar. O preenchimento dos campos marcados com asterisco (*) e obrigatório para envio da mensagem. Em breve retornamos o cantato. <strong>Obrigado</strong></small></p>
 
     <div class="col-md-6" style="padding-right: 20px;">
       <?php
@@ -78,12 +78,12 @@
       <div class="form-group">
         <label class="label-control">Assunto:</label> <br>
         <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Reserva">Reservas</label>
-        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Informacoes">Informaçoes</label>
+        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Informacoes">Informações</label>
       </div>
     </div>
     <div class="col-md-7 col-md-offset-1">
       <div class="form-group">
-        <label class="label-control">Voce e:</label> <br>
+        <label class="label-control">Você é:</label> <br>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Escola">Escola</label>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Igreja">Igreja</label>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Empresa">Empresa</label>
@@ -97,8 +97,8 @@
         echo $this->Form->input('pessoas',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
-                                'placeholder' => 'Numero de pessoas',
-                                'label' => array('text' => 'Numero de pessoas: ')
+                                'placeholder' => 'Número de pessoas',
+                                'label' => array('text' => 'Número de pessoas: ')
                                 )
                             );
       ?>
@@ -161,11 +161,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <center>
+          <br />
+          <br />
+          <br />
           <h4>E-mail</h4>
           <p>contato@sitiodasabelhas.com.br</p>
         </center>
+      </div>
+
+      <div class="col-md-6" align="center">
+        <div class="fb-like-box" data-href="https://www.facebook.com/sitiodasabelhas" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
       </div>
     </div>
 
