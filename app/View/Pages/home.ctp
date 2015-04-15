@@ -6,14 +6,13 @@
 </style>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
       <div class="fotorama" 
-            data-nav="false" 
             data-loop="true" 
             data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%" 
-            data-minheight="350">
+            data-minheight="300">
       <?php
       foreach ($capasPousada as $key => $value) {
         //pr($value);
@@ -26,14 +25,13 @@
       </center>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
       <div class="fotorama" 
-            data-nav="false" 
             data-loop="true" 
             data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%"
-            data-minheight="350" >
+            data-minheight="300" >
       <?php
       foreach ($capasLazer as $key => $value) {
         //pr($value);
@@ -46,14 +44,13 @@
       </center>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
       <div class="fotorama" 
-            data-nav="false" 
             data-loop="true" 
             data-autoplay="true" 
             data-ratio="16/9" 
             data-width="100%" 
-            data-minheight="350">
+            data-minheight="300">
       <?php
       foreach ($capasEventos as $key => $value) {
         //pr($value);

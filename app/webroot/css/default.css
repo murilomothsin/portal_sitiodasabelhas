@@ -44,6 +44,7 @@ body {
 }
 
 .link-footer a {
+  line-height: 16px;
   color: #77871C !important;
   text-decoration: none;
 }
