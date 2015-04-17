@@ -15,6 +15,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap');
+		echo $this->Html->css('font-awesome');
 		echo $this->Html->css('fotorama');
 		echo $this->Html->css('default');
 
