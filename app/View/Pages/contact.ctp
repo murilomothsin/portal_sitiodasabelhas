@@ -7,7 +7,8 @@
     var mapOptions = {
       zoom: 14,
       center: new google.maps.LatLng(-29.6734521, -50.7398933),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapMaker: true
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
@@ -133,7 +134,10 @@
 
     <div class="row">
       <div class="col-md-12">
-        <center><div id="map-canvas"></div></center>
+        <center>
+          <!-- <div id="map-canvas"></div> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1733.2902660778252!2d-50.74028870000001!3d-29.673944299999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95191e9fe9e3a0ab%3A0xf1845608a3e3c950!2sR.+Pedro+Alfredo+Breyer%2C+Taquara+-+RS%2C+95600-000%2C+Brasil!5e0!3m2!1spt-BR!2s!4v1430789612018" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        </center>
       </div>
     </div>
 
