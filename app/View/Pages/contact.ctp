@@ -44,18 +44,25 @@
                                   'label' => array('text' => 'Nome: ')
                                   )
                               );
-        echo $this->Form->input('telefone',
+        echo $this->Form->input('endereco',
+                          array('div' => 'form-group',
+                                'class' => 'form-control',
+                                'placeholder' => 'Cidade',
+                                'label' => array('text' => 'Cidade: ')
+                                )
+                            );
+
+      ?>
+    </div>
+    <div class="col-md-6">
+      <?php
+      echo $this->Form->input('telefone',
                             array('div' => 'form-group',
                                   'class' => 'form-control',
                                   'placeholder' => 'Telefone',
                                   'label' => array('text' => 'Telefone: ')
                                   )
                               );
-
-      ?>
-    </div>
-    <div class="col-md-6">
-      <?php
       echo $this->Form->input('email',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
@@ -64,26 +71,20 @@
                                 'label' => array('text' => 'E-mail: ')
                                 )
                             );
-      echo $this->Form->input('endereco',
-                          array('div' => 'form-group',
-                                'class' => 'form-control',
-                                'placeholder' => 'Cidade',
-                                'label' => array('text' => 'Cidade: ')
-                                )
-                            );
-
     ?>
     </div>
-
-    <div class="col-md-4">
-      <div class="form-group">
-        <label class="label-control">Assunto:</label> <br>
-        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Reserva">Reservas</label>&nbsp;&nbsp;&nbsp;
-        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Informacoes">Informações</label>
-      </div>
+    <div class="col-md-8">
+      <?php
+        echo $this->Form->input('qual',
+                          array('div' => 'form-group',
+                                'class' => 'form-control',
+                                'placeholder' => 'Nome da escola/igreja/empresa do grupo',
+                                'label' => array('text' => 'Qual? ')
+                                )
+                            );
+      ?>
     </div>
-
-    <div class="col-md-4 col-md-offset-2">
+    <div style="padding-left: 20px; " class="col-md-4">
       <?php
         echo $this->Form->input('pessoas',
                           array('div' => 'form-group',
@@ -97,6 +98,14 @@
 
     <div class="col-md-12">
       <div class="form-group">
+        <label class="label-control">Assunto:</label> <br>
+        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Reserva">Reservas</label>&nbsp;&nbsp;&nbsp;
+        <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Informacoes">Informações</label>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
         <label class="label-control">Você é:</label> <br>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Escola">Escola</label>&nbsp;&nbsp;
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Igreja">Igreja</label>&nbsp;&nbsp;
@@ -105,7 +114,6 @@
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Outros">Outros</label>
       </div>
     </div>
-
     
     <div class="col-md-4 col-md-offset-4">
 
@@ -143,8 +151,8 @@
 
     <hr>
 
-      <div class="row">
-        <div class="col-md-6">
+      <div class="col-md-6">
+        <div class="col-md-12">
           <center>
             <h4>Telefone:</h4>
             <p>
@@ -154,17 +162,7 @@
             </p>
           </center>
         </div>
-
-        <div class="col-md-6">
-          <center>
-            <h4>E-mail:</h4>
-            <p>contato@sitiodasabelhas.com.br</p>
-            
-          </center>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <center>
             <h4>Endereço:</h4>
             <p>
@@ -174,12 +172,19 @@
               95600-000
             </p>
           </center>
+          <center>
+            <h4>E-mail:</h4>
+            <p>contato@sitiodasabelhas.com.br</p>
+          </center>
         </div>
+      </div>
 
-        <div class="col-md-6" align="center">
+      <div class="col-md-6">
+        <div class="col-md-12" align="center">
           <div class="fb-like-box" data-href="https://www.facebook.com/sitiodasabelhas" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
         </div>
       </div>
+
   </div>
 
 </div>

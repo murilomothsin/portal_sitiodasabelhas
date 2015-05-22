@@ -1,4 +1,3 @@
-<?php if($cat == 0){ ?>
 <div class="row">
   <?php
     $i = 1;
@@ -12,7 +11,7 @@
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
           <div class="caption" style="position: relative; ">
-            <center><h3>'.$value['Hotel']['title'].'</h3></center>
+            <center><h3><strong>'.$value['Hotel']['title'].'</strong></h3></center>
             <p style="min-height: 200px;"" >'.nl2br($value['Hotel']['description']).'</p>
             <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="hotel" data-id="'.$value['Hotel']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
               Mais fotos
@@ -32,29 +31,6 @@
     }
   ?>
 </div>
-
-<?php }else{ ?>
-
-<div class="row">
-  <div class="col-md-4 col-md-offset-1">
-    <div class="thumbnail">
-      <?php echo $this->Html->link($this->Html->image('familias.jpg', array('alt' => 'Familias')), '/pousada/1', array('escape' => false)); ?>
-      <div class="caption" align="center">
-        <?php echo $this->Html->link('Cabanas', '/pousada/1', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 col-md-offset-1">
-    <div class="thumbnail">
-      <?php echo $this->Html->link($this->Html->image('grupos.jpg', array('alt' => 'Familias')), '/pousada/2', array('escape' => false)); ?>
-      <div class="caption" align="center">
-        <?php echo $this->Html->link('Alojamentos', '/pousada/2', array('escape' => false, 'class' => 'btn btn-primary btn-lg')); ?>
-      </div>
-    </div>
-  </div>
-</div>
-
-<?php } ?>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

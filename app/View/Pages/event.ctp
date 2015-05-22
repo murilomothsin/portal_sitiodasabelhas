@@ -1,16 +1,20 @@
 <div class="row">
-  <?php 
+  <?php
+    $classs = ''; 
+    if(count($eventos) == 2){
+      $classs = 'col-md-offset-2';
+    }
     foreach ($eventos as $key => $value) {
       if($value['Event']['event_status_id'] == 1)
         $text = 'Salão com Refeitório';
       else
         $text = 'Salão com Auditório';
       echo '
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-6 col-md-4 '.$classs.'">
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'">
           <div class="caption" style="position: relative;">
-            <center><h3>'.$value['Event']['title'].'</h3></center>
+            <center><h3><strong>'.$value['Event']['title'].'</strong></h3></center>
             <p>'.nl2br($value['Event']['description']).'</p>
             <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="event" data-id="'.$value['Event']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
               Mais fotos
@@ -22,6 +26,7 @@
         </div>
       </div>
       ';
+      $classs = '';
     }
   ?>
 </div>

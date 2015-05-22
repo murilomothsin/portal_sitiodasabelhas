@@ -40,18 +40,25 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 	<div id="container" class="container-fluid">
 
 		<div id="header" class="row" style="background-color: #FFF;">
-			<div class="col-md-4 logo">
+			<div class="col-md-1 logo">
 				<center><?php echo $this->Html->link($this->Html->image('logo.jpg', array('alt' => 'Sitio das abelhas', 'height' => '75')), '/', array('escape' => false)); ?></center>
 			</div>
-			<div class="col-md-6 menu-superior">
+			<div class="col-md-3" style="padding-top: 20px; padding-left: 30px;">
+				<span class="logo-text logo-background">Sitio das Abelhas</span>
+			</div>
+			<div class="col-md-7 menu-superior">
 				<ul class="nav nav-pills nav-justified" role="tablist">
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'home') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('O Sitio', '/'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'hotel') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Pousada', '/pousada'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'event') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Eventos', '/eventos'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'leisure') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Lazer', '/lazer'); ?></li>
+				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'food') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Alimentação', '/alimentacao'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'galery') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Galeria', '/galeria'); ?></li>
 				  <li role="presentation" class="<?php echo (!empty($this->params['action']) && ($this->params['action'] == 'contact') )? 'active' : 'inactive'?>"><?php echo $this->Html->link('Contato', '/contato'); ?></li>
 				</ul>
+			</div>
+			<div class="col-md-1">
+				<center><?php echo $this->Html->link($this->Html->image('fb_icon_325x325.png', array('alt' => 'Sitio das abelhas', 'height' => '75')), 'https://www.facebook.com/sitiodasabelhas', array('escape' => false, 'target' => '_blank')); ?></center>
 			</div>
 		</div>
 
@@ -85,6 +92,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 				</div>
 			</div>
 			<hr> -->
+			<?php if((!empty($this->params['action'])) && ($this->params['action'] != 'contact')){ ?>
 			<div class="row">
 				<div class="col-md-3">
 					<div align="center">
@@ -94,7 +102,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 					</div>
 				</div>
 				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee" align="center">
-					<ul style="list-style: none; margin: 0px; padding: 0px;">
+					<ul style="list-style: none; margin: 0px; padding: 0px; font-size: 18px;">
 						<li class="link-footer"><?php echo $this->Html->link('O Sitio', '/'); ?></li>
 						<li class="link-footer"><?php echo $this->Html->link('Pousada', '/pousada'); ?></li>
 						<li class="link-footer"><?php echo $this->Html->link('Eventos', '/eventos'); ?></li>
@@ -104,7 +112,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 					</ul>
 				</div>
 				<div class="col-md-6 col-md-offset-1">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<div align="center">
 							<h4>Telefone:</h4>
 		          <p>
@@ -114,7 +122,14 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 		          </p>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4">
+						<?php 
+						echo $this->Html->link($this->Html->image('maps-pointer.png', array('alt' => 'Como chegar', 'height' => '75')), '/contato', array('escape' => false));
+						echo '<br />';
+						echo $this->Html->link('Como chegar', '/contato', array('escape' => false, 'class' => 'btn btn-primary'));
+						 ?>
+					</div>
+					<div class="col-md-4">
 						<address align="center">
 							<h4>Endereço</h4>
 			        <p>
@@ -125,11 +140,9 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 			        </p>
 			      </address>
 					</div>
-					<div class="col-md-12" align="center">
-						<?php echo $this->Html->link('Como chegar', '/contato', array('escape' => false, 'class' => 'btn btn-primary')); ?>
-					</div>
 				</div>
 			</div>
+			<?php } ?>
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4">
 					<div align="center">

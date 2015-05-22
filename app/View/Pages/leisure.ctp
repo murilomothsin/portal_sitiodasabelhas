@@ -11,7 +11,7 @@ foreach ($lazer as $key => $value) {
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
           <div class="caption" style="position: relative;">
-            <center><h3>'.$value['Leisure']['title'].'</h3></center>
+            <center><h3><strong>'.$value['Leisure']['title'].'<strong></h3></center>
             <p>'.nl2br($value['Leisure']['description']).'</p>
             <div align="center">
               <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="leisure" data-id="'.$value['Leisure']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">

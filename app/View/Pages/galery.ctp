@@ -10,7 +10,7 @@
         <div class="thumbnail">
           <img src="'.$value['BrwImage']['main']['url'].'" alt="'.$value['BrwImage']['main']['model'].'" style="max-height: 400px;">
           <div class="caption" style="position: relative; ">
-            <center><h3>'.$value['Galery']['title'].'</h3></center>
+            <center><h3><strong>'.$value['Galery']['title'].'</strong></h3></center>
             <p>'.nl2br($value['Galery']['description']).'</p>
             <button type="button" class="btn btn-primary btn-lg ver_mais" data-type="galery" data-id="'.$value['Galery']['id'].'" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">
               Mais fotos

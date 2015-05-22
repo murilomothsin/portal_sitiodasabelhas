@@ -45,7 +45,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure');
+	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure', 'Food');
 
 	public function home() {
 		$this->set("title_for_layout","Home");
@@ -55,16 +55,16 @@ class PagesController extends AppController {
 	}
 
 	public function hotel() {
-		$this->set("cat", 1);
+		//$this->set("cat", 1);
 		$this->set("title_for_layout","Pousada");
-		if(isset($this->request->params['id'])){
-			$this->set("cat", 0);
-			$this->set( "cabanas", $this->Hotel->find('all', array(
-        'conditions' => array('Hotel.hotel_status_id' => $this->request->params['id']) ) ));
-		}else{
-			$this->set("cat", 1);
+		//if(isset($this->request->params['id'])){
+		//	$this->set("cat", 0);
+		//	$this->set( "cabanas", $this->Hotel->find('all', array(
+    //    'conditions' => array('Hotel.hotel_status_id' => $this->request->params['id']) ) ));
+		//}else{
+		//	$this->set("cat", 1);
 			$this->set( "cabanas", $this->Hotel->find('all') );
-		}
+		//}
 	}
 
 	public function event() {
@@ -83,6 +83,11 @@ class PagesController extends AppController {
         'order' => array('Galery.when' => 'desc')) ));
 	}
 
+	public function food() {
+		$this->set("title_for_layout","Alimentaçao");
+		$this->set( "food", $this->Food->find('all') );
+	}
+
 	public function ajax($id = null, $type = ''){
 		$this->layout = "ajax";
 		if($type == 'event'){
@@ -97,7 +102,9 @@ class PagesController extends AppController {
 		if($type == 'hotel'){
 			$this->set("evento", $this->Hotel->findById($id));
 		}
-		
+		if($type == 'food'){
+			$this->set("evento", $this->Food->findById($id));
+		}
 		//$this->set("imageList",$files1);
 	}
 

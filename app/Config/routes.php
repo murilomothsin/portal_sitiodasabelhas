@@ -33,6 +33,7 @@
 	Router::connect('/eventos', array('controller' => 'pages', 'action' => 'event'));
   Router::connect('/galeria', array('controller' => 'pages', 'action' => 'galery'));
   Router::connect('/lazer', array('controller' => 'pages', 'action' => 'leisure'));
+  Router::connect('/alimentacao', array('controller' => 'pages', 'action' => 'food'));
   Router::connect('/contato', array('controller' => 'pages', 'action' => 'contact'));
   Router::connect('/ajax', array('controller' => 'pages', 'action' => 'ajax'));
 	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
