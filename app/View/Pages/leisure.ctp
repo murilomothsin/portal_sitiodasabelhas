@@ -37,7 +37,7 @@ foreach ($lazer as $key => $value) {
   <div class="modal-dialog" style="width: 850px; height: 500px;">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fechar&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fechar <span style="margin-left: 5px;">&times;</span></span></button>
       </div>
       <div class="modal-body" style="width: 850px; height: 500px; overflow: y;">
         <div id="contentView"></div>

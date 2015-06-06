@@ -63,7 +63,8 @@ class PagesController extends AppController {
     //    'conditions' => array('Hotel.hotel_status_id' => $this->request->params['id']) ) ));
 		//}else{
 		//	$this->set("cat", 1);
-			$this->set( "cabanas", $this->Hotel->find('all') );
+			$this->set( "cabanas", $this->Hotel->find('all', array(
+				'order' => array('Hotel.order' => 'asc'))) );
 		//}
 	}
 
@@ -79,6 +80,8 @@ class PagesController extends AppController {
 
 	public function galery() {
 		$this->set("title_for_layout","Galeria de fotos");
+		if(isset($this->request->query['album']))
+			$this->set("request_album", $this->request->query['album']);
 		$this->set( "galerias", $this->Galery->find('all', array(
         'order' => array('Galery.when' => 'desc')) ));
 	}

@@ -58,7 +58,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 				</ul>
 			</div>
 			<div class="col-md-1">
-				<center><?php echo $this->Html->link($this->Html->image('fb_icon_325x325.png', array('alt' => 'Sitio das abelhas', 'height' => '75')), 'https://www.facebook.com/sitiodasabelhas', array('escape' => false, 'target' => '_blank')); ?></center>
+				<center><?php echo $this->Html->link($this->Html->image('fb_icon_325x325.png', array('alt' => 'Sitio das abelhas', 'height' => '45', 'style' => 'margin-top: 15px')), 'https://www.facebook.com/sitiodasabelhas', array('escape' => false, 'target' => '_blank')); ?></center>
 			</div>
 		</div>
 
@@ -101,7 +101,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 						<div class="fb-like" data-href="https://www.facebook.com/sitiodasabelhas" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 					</div>
 				</div>
-				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee" align="center">
+				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee; text-align: justify;" align="center">
 					<ul style="list-style: none; margin: 0px; padding: 0px; font-size: 18px;">
 						<li class="link-footer"><?php echo $this->Html->link('O Sitio', '/'); ?></li>
 						<li class="link-footer"><?php echo $this->Html->link('Pousada', '/pousada'); ?></li>
@@ -118,7 +118,7 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 		          <p>
 		            Fixo Vivo (51)3179-4100<br />
 		            Geraldo (51)9981-7601 <br />
-		            Leonardo (51)9777-9658<br />
+		            <?php echo $this->Html->image('Whats.png', array('alt' => 'Whatsapp', 'height' => '20')); ?>Leonardo (51)9777-9658<br />
 		          </p>
 						</div>
 					</div>
