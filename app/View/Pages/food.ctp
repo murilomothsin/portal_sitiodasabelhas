@@ -24,7 +24,7 @@
 <hr>
 
 <div class="row">
-  <div align="center">
+  <div class="col-md-12">
     <?php 
     echo nl2br($food[0]['Food']['description']);
     ?>

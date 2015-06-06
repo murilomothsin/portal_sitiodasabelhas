@@ -101,8 +101,8 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 						<div class="fb-like" data-href="https://www.facebook.com/sitiodasabelhas" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 					</div>
 				</div>
-				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee; text-align: justify;" align="center">
-					<ul style="list-style: none; margin: 0px; padding: 0px; font-size: 18px;">
+				<div class="col-md-2" style="border-left: 1px solid #eee; border-right: 1px solid #eee; padding-left: 60px;" align="center">
+					<ul style="list-style: none; margin: 0px; padding: 0px; font-size: 18px; text-align: justify;">
 						<li class="link-footer"><?php echo $this->Html->link('O Sitio', '/'); ?></li>
 						<li class="link-footer"><?php echo $this->Html->link('Pousada', '/pousada'); ?></li>
 						<li class="link-footer"><?php echo $this->Html->link('Eventos', '/eventos'); ?></li>

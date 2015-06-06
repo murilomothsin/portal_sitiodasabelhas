@@ -62,7 +62,7 @@ if(isset($request_album) && $request_album != 0){
       $("#contentView").html('<center><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Carregando...</center>');
       var id = <?php echo $request_album ?>;
       var type = "galery";
-      $.get("/cakephp/pages/ajax/"+id+"/"+type,
+      $.get("/pages/ajax/"+id+"/"+type,
         null,
         function(data) {
           $("#contentView").html(data);
