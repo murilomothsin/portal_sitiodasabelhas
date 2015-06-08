@@ -45,10 +45,11 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure', 'Food');
+	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure', 'Food', 'DescriptionCapa');
 
 	public function home() {
 		$this->set("title_for_layout","Home");
+		$this->set("description", $this->DescriptionCapa->find('first'));
 		$this->set( "capasPousada", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 1) ) ) );
 		$this->set( "capasLazer", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 2) ) ) );
 		$this->set( "capasEventos", $this->Capa->find('all', array('conditions' => array('Capa.capa_status_id' => 3) ) ) );
@@ -120,18 +121,21 @@ class PagesController extends AppController {
 <b>Telefone: </b>'.$this->request->data['Email']['telefone'].'<br />
 <b>E-mail: </b>'.$this->request->data['Email']['email'].'<br />
 <b>Endereço: </b>'.$this->request->data['Email']['endereco'].'<br />
-<b>Assunto: </b>'.$this->request->data['Email']['evento'].'<br />
+<b>Nome da escola/igreja/empresa/grupo: </b>'.$this->request->data['Email']['qual'].'<br />
+<b>Número de pessoas: </b>'.$this->request->data['Email']['pessoas'].'<br />
+<b>Assunto: </b>'.$this->request->data['Email']['assunto'].'<br />
+<b>Você é: </b>'.$this->request->data['Email']['remetente'].'<br />
 <b>Mensagem: </b><p>'.nl2br($this->request->data['Email']['Mensagem']).'</p><br />
 			';
 			$Email = new CakeEmail();
-			$Email->config('default');
-			$Email->from(array('me@example.com' => 'My Site'))
+			$Email->config('smtp');
+			$Email->from(array('sitiodas@sitiodasabelhas.com.br' => 'Sitio das abelhas'))
 				->emailFormat('html')
-				->to('mothsin@hotmail.com')
-				->subject('About')
+				->to('contato@sitiodasabelhas.com.br')
+				->subject('Formulario de contato')
 				->send($email);
 			$this->Session->setFlash(__('E-mail enviado com sucesso'));
-			$this->redirect(array('action' => 'contato'));
+			$this->redirect('/contato');
 		}
 
 	}

@@ -78,7 +78,7 @@
         echo $this->Form->input('qual',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
-                                'placeholder' => 'Nome da escola/igreja/empresa do grupo',
+                                'placeholder' => 'Nome da escola/igreja/empresa/grupo',
                                 'label' => array('text' => 'Qual? ')
                                 )
                             );

@@ -38,6 +38,7 @@ echo $this->Html->script('fotorama');
   <div class="fotorama" 
     data-nav="thumbs" 
     data-width="600" 
+    data-loop="true"
     data-ratio="600/360" 
     data-max-width="100%"
     data-autoplay="true"

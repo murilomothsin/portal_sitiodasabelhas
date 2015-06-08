@@ -115,10 +115,10 @@ $cakeVersion = __d('cake_dev', 'Sitio das abelhas - 2014')
 					<div class="col-md-4">
 						<div align="center">
 							<h4>Telefone:</h4>
-		          <p>
+		          <p style="text-align: justify;">
 		            Fixo Vivo (51)3179-4100<br />
 		            Geraldo (51)9981-7601 <br />
-		            <?php echo $this->Html->image('Whats.png', array('alt' => 'Whatsapp', 'height' => '20')); ?>Leonardo (51)9777-9658<br />
+		            <?php echo $this->Html->image('Whats.png', array('alt' => 'Whatsapp', 'height' => '20', 'style' => 'margin-left: -20px;')); ?>Leonardo (51)9777-9658<br />
 		          </p>
 						</div>
 					</div>

@@ -4,13 +4,13 @@
   bottom: 5px;
 }
 </style>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4" style="padding-left: 5px; padding-right: 5px;">
       <div class="fotorama"
             data-loop="true"
             data-autoplay="true"
-            data-arrows="true"
             data-click="true"
             data-swipe="true"
             data-ratio="16/9"
@@ -72,6 +72,12 @@
       </center>
     </div>
 
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1" align="center">
+      <?php echo $description['DescriptionCapa']['title']; ?>
+    </div>
   </div>
 </div>
 <br />
