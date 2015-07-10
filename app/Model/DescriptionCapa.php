@@ -19,7 +19,7 @@
       'actions' => array(
         'add' => false,
         'delete' => false,
-        'edit' => false,
+        'edit' => true,
       ),
     );
 
