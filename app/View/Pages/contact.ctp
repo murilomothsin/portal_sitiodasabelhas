@@ -33,7 +33,11 @@
 
     <h3>Contato</h3>
     <hr>
-    <p><small>Para entrar em contato conosco por email, preencha os dados abaixo e clique em enviar.</small></p>
+    <p>
+      <small>
+        Para um atendimento mais rápido preencha os dados abaixo e clique em enviar, que logo entraremos em contato por e-mail.
+      </small>
+    </p>
 
     <div class="col-md-6" style="padding-right: 20px;">
       <?php
@@ -75,11 +79,11 @@
     </div>
     <div class="col-md-8">
       <?php
-        echo $this->Form->input('qual',
+        echo $this->Form->input('datas_horarios',
                           array('div' => 'form-group',
                                 'class' => 'form-control',
-                                'placeholder' => 'Nome da escola/igreja/empresa/grupo',
-                                'label' => array('text' => 'Qual? ')
+                                'placeholder' => 'Datas e horários, de entrada e saída',
+                                'label' => array('text' => 'Datas e horários, de entrada e saída: ')
                                 )
                             );
       ?>
@@ -96,25 +100,38 @@
       ?>
     </div>
 
-    <div class="col-md-12">
+    <!-- <div class="col-md-12">
       <div class="form-group">
         <label class="label-control">Assunto:</label> <br>
         <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Reserva">Reservas</label>&nbsp;&nbsp;&nbsp;
         <label><input name="data[Email][assunto]" type="radio" id="EmailAssunto" name="EmailAssunto" value="Informacoes">Informações</label>
       </div>
-    </div>
+    </div> -->
 
     <div class="col-md-12">
       <div class="form-group">
-        <label class="label-control">Você é:</label> <br>
+        <label class="label-control">Categoria:</label> <br>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Escola">Escola</label>&nbsp;&nbsp;
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Igreja">Igreja</label>&nbsp;&nbsp;
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Empresa">Empresa</label>&nbsp;&nbsp;
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Escoteiros">Escoteiros</label>&nbsp;&nbsp;
+        <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Familia">Família</label>
         <label><input name="data[Email][remetente]" type="radio" id="EmailRemetente" name="EmailRemetente" value="Outros">Outros</label>
       </div>
     </div>
-    
+
+    <div class="col-md-12">
+      <?php
+        echo $this->Form->input('qual',
+                          array('div' => 'form-group',
+                                'class' => 'form-control',
+                                'placeholder' => 'Nome da escola/igreja/empresa/grupo',
+                                'label' => array('text' => 'Qual? ')
+                                )
+                            );
+      ?>
+    </div>
+
     <div class="col-md-4 col-md-offset-4">
 
     </div>
@@ -132,7 +149,7 @@
                                     )
                                 );
       $options = array( 'label' => 'Enviar',
-                        'class' => 'btn'
+                        'class' => 'btn btn-primary'
       );
       echo $this->Form->end($options); ?>
     </div>
@@ -145,7 +162,7 @@
         <center>
           <!-- <div id="map-canvas"></div> -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13866.361375836257!2d-50.74209144445801!3d-29.673659684041336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95191e988c6effab%3A0xaa7f5fa356192f1f!2sR.+Pedro+Alfredo+Breyer%2C+Taquara+-+RS%2C+95600-000%2C+Brasil!5e0!3m2!1spt-BR!2sus!4v1433597663011" width="600" height="450" frameborder="0" style="border:0"></iframe>
-         
+
         </center>
       </div>
     </div>
@@ -153,13 +170,18 @@
     <hr>
 
       <div class="col-md-6">
+        <div class="col-md-12 warning-contact" align="center">
+          Atenção: <br />
+           Para conhecer o Sitio agende um horário!
+        </div>
+        <br />
         <div class="col-md-12">
           <center>
             <h4>Telefone:</h4>
             <p>
               Fixo Vivo (51)3179-4100<br />
               Geraldo (51)9981-7601 <br />
-              Leonardo (51)9777-9658<br />
+              <?php echo $this->Html->image('Whats.png', array('alt' => 'Whatsapp', 'height' => '20', 'style' => 'margin-left: -20px;')); ?>Leonardo (51)9777-9658<br />
             </p>
           </center>
         </div>
