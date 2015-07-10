@@ -37,7 +37,7 @@
             data-swipe="true"
             data-ratio="16/9"
             data-width="100%"
-            data-minheight="300" >
+            data-minheight="350" >
       <?php
       foreach ($capasLazer as $key => $value) {
         //pr($value);

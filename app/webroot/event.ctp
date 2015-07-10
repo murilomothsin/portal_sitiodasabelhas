@@ -1,6 +1,6 @@
 <div class="row">
   <?php
-    $classs = '';
+    $classs = ''; 
     if(count($eventos) == 2){
       $classs = 'col-md-offset-2';
     }
@@ -9,8 +9,6 @@
         $text = 'Salão com Refeitório';
       else
         $text = 'Salão com Auditório';
-
-      $text = 'Capacidade 200 pessoas';
       echo '
       <div class="col-sm-6 col-md-4 '.$classs.'">
         <div class="thumbnail">
