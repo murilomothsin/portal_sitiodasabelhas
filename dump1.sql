@@ -88,6 +88,14 @@ CREATE TABLE IF NOT EXISTS `event` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='utf8_general_ci';
 
+CREATE TABLE IF NOT EXISTS `event_text` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` text NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='utf8_general_ci';
+
 -- Data exporting was unselected.
 
 

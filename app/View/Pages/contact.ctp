@@ -25,7 +25,9 @@
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-
+<?php
+echo $this->Session->flash('flash', array('element' => 'success'));
+?>
 <div class="row">
 
   <div class="col-md-6 form-contact" style="padding-right: 20px;">

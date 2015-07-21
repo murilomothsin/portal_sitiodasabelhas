@@ -45,7 +45,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Capa', 'Hotel', 'Event', 'Galery', 'Leisure', 'Food', 'DescriptionCapa');
+	public $uses = array('Capa', 'Hotel', 'Event', 'EventText', 'Galery', 'Leisure', 'Food', 'DescriptionCapa');
 
 	public function home() {
 		$this->set("title_for_layout","Home");
@@ -72,6 +72,7 @@ class PagesController extends AppController {
 	public function event() {
 		$this->set("title_for_layout","Eventos");
 		$this->set( "eventos", $this->Event->find('all') );
+		$this->set( "eventText", $this->EventText->find('first') );
 	}
 
 	public function leisure() {
@@ -123,7 +124,7 @@ class PagesController extends AppController {
 <b>Endereço: </b>'.$this->request->data['Email']['endereco'].'<br />
 <b>Nome da escola/igreja/empresa/grupo: </b>'.$this->request->data['Email']['qual'].'<br />
 <b>Número de pessoas: </b>'.$this->request->data['Email']['pessoas'].'<br />
-<b>Assunto: </b>'.$this->request->data['Email']['assunto'].'<br />
+<b>Datas e horarios: </b>'.$this->request->data['Email']['datas_horarios'].'<br />
 <b>Você é: </b>'.$this->request->data['Email']['remetente'].'<br />
 <b>Mensagem: </b><p>'.nl2br($this->request->data['Email']['Mensagem']).'</p><br />
 			';

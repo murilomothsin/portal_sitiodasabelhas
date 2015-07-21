@@ -5,6 +5,12 @@
 .logo-background {
   /* background-image: url("../img/madeira1.jpg"); */
 }
+.message-info {
+  padding-left: 20px;
+  color: #77871C;
+  font-size: 14px;
+  line-height: 35px;
+}
 .logo-text {
   font-family: Flubber;
   font-size: 26px;

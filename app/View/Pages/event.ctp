@@ -1,6 +1,6 @@
 <div class="row">
   <?php
-    $classs = ''; 
+    $classs = '';
     if(count($eventos) == 2){
       $classs = 'col-md-offset-2';
     }
@@ -29,6 +29,12 @@
       $classs = '';
     }
   ?>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <p><?php echo nl2br($eventText['EventText']['description']); ?></p>
+  </div>
 </div>
 
 <!-- Modal -->
